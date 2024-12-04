@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+}
+header {
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: transparent;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo img {
+  width: 100px;
+
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+  border-bottom: 3px solid #b74b4b;
+}
+@media (max-width: 995px) {
+  nav {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem solid;
+    background-color: #161616;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  }
+  nav.active {
+    display: block;
+  }
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  nav a:hover,
+  nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #b74b4b;
+  }
+}
+section {
+  min-height: 100vh;
+  padding: 5rem 9% 5rem;
+}
+.about {
+  padding: 5rem 9%; /* Matches the section spacing from other sections */
+  background-color: black; /* Consistent with the dark theme */
+  color: white; /* Text color for readability */
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 4rem; /* Large section heading */
+  font-weight: 700; /* Bold for emphasis */
+  color: #b74b4b; /* Highlighted title color */
+  margin-bottom: 2rem; /* Space below the heading */
+  text-transform: uppercase; /* Emphasizes section header */
+}
+
+.about p {
+  font-size: 1.8rem; /* Subheading text size */
+  font-weight: 300; /* Lighter weight for clean look */
+  line-height: 1.6; /* Improves readability */
+  color: #d4d4d4; /* Subtle text contrast */
+  margin-bottom: 4rem; /* Space between text and content */
+}
+
+.about-content {
+  display: flex; /* Aligns image and details horizontally */
+  align-items: center; /* Centers items vertically */
+  gap: 4rem; /* Space between the image and the details */
+  flex-wrap: wrap; /* Adjusts layout for smaller screens */
+}
+
+.about-img img {
+  width: 30rem; /* Sets the size of the image */
+  border-radius: 1rem; /* Adds rounded corners */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.about-img img:hover {
+  transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+.about-details {
+  flex: 1; /* Makes the details section take remaining space */
+}
+
+.about-details h3 {
+  font-size: 3rem; /* Subheading size */
+  margin-bottom: 2rem; /* Space below the heading */
+  color: #b74b4b; /* Matches the accent color */
+  text-transform: uppercase; /* Adds emphasis */
+}
+
+.about-details ul {
+  list-style: none; /* Removes default bullet points */
+  padding: 0; /* Removes default padding */
+}
+
+.about-details li {
+  font-size: 2rem; /* Size of list items */
+  font-weight: 500; /* Medium weight for better readability */
+  margin-bottom: 1rem; /* Space between list items */
+  position: relative;
+}
+
+.about-details li::before {
+  content: "•"; /* Custom bullet point */
+  color: #b74b4b; /* Accent color for bullet points */
+  font-size: 2rem; /* Slightly larger bullet size */
+  margin-right: 1rem; /* Space between bullet and text */
+}
+
+.about .btn {
+  display: inline-block;
+  margin-top: 2rem; /* Space above the button */
+  padding: 1rem 2.5rem;
+  background-color: black; /* Button background */
+  color: #b74b4b; /* Button text color */
+  border: 2px solid #b74b4b; /* Border matches accent color */
+  border-radius: 2rem; /* Rounded corners */
+  font-size: 1.6rem; /* Text size */
+  font-weight: 600; /* Bold for emphasis */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about .btn:hover {
+  background-color: #b74b4b; /* Highlighted background on hover */
+  color: black; /* Text color switches for contrast */
+  box-shadow: 0 0 15px #b74b4b; /* Adds glow on hover */
+}
+/* Ensure the navbar does not hide content */
+body {
+  margin-top: 8rem; /* Adjust this based on navbar height */
+}
+
+/* Show navbar on all screen sizes */
+header nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+  border-bottom: 3px solid #b74b4b;
+}
+
+/* Navbar for small screens (995px or less) */
+@media (max-width: 995px) {
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: #161616;
+    padding: 1rem;
+  }
+
+  nav a {
+    font-size: 1.6rem;
+    margin: 1rem 2rem;
+  }
+
+  nav a:hover,
+  nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #b74b4b;
+  }
+}
+/* Fixing navbar on top */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: transparent;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  /* Adjusting to avoid overlapping with content */
+  top: 0;
+}
+
+/* Content section adjustment */
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 5rem; /* Increased padding-top to accommodate navbar */
+  /* Ensure content isn't hidden by navbar */
+}
+
+/* Responsive adjustments */
+@media (max-width: 995px) {
+  body {
+    margin-top: 6rem; /* Adjust the margin to fit the navbar height */
+  }
+
+  section {
+    padding: 8rem 4rem 5rem; /* Reduced padding on smaller screens */
+  }
+}

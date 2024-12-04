@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+}
+header {
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: transparent;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo img {
+  width: 100px;
+
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+  border-bottom: 3px solid #b74b4b;
+}
+@media (max-width: 995px) {
+  nav {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem solid;
+    background-color: #161616;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  }
+  nav.active {
+    display: block;
+  }
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  nav a:hover,
+  nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #b74b4b;
+  }
+}
+section {
+  min-height: 100vh;
+  padding: 5rem 9% 5rem;
+}
+.services {
+  padding: 5rem 9%; /* Matches the spacing used in other sections */
+  background-color: black; /* Keeps the dark theme consistent */
+  color: white; /* Text color for readability */
+  text-align: center;
+  height: auto;
+}
+
+.services h2 {
+  font-size: 4rem; /* Large, bold section heading */
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #b74b4b; /* Highlighted title color */
+  text-transform: uppercase; /* Adds emphasis to the section title */
+}
+
+.services p {
+  font-size: 1.8rem; /* Slightly smaller than the heading */
+  font-weight: 300;
+  margin-bottom: 4rem; /* Spacing between the paragraph and list */
+  line-height: 1.6; /* Improves readability */
+  color: #d4d4d4; /* Subtle contrast to main text color */
+}
+
+.services ul {
+  list-style: none; /* Removes default bullets */
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Even spacing between list items */
+  flex-wrap: wrap; /* Ensures items adjust nicely on smaller screens */
+  padding: 0;
+}
+
+.services li {
+  font-size: 1.6rem; /* Readable size for list items */
+  font-weight: 500;
+  background-color: #222; /* Subtle contrast with the black background */
+  color: white;
+  padding: 2rem 3rem;
+  border-radius: 1rem; /* Rounded corners for a polished look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.services li:hover {
+  transform: translateY(-5px) scale(1.05); /* Adds a subtle hover effect */
+  box-shadow: 0 0 20px #b74b4b; /* Glow effect on hover */
+  background-color: #b74b4b; /* Highlight color for hover */
+  color: black; /* Inverts text color on hover */
+}
+
+@media (max-width: 995px) {
+  .services ul {
+    flex-direction: column; /* Switch to a vertical layout */
+    gap: 1.5rem; /* Adjusts spacing for smaller screens */
+  }
+
+  .services li {
+    font-size: 1.4rem; /* Slightly smaller text */
+    padding: 1.5rem 2rem; /* Adjusts padding for smaller screens */
+  }
+}
+/* Show navbar on all screen sizes */
+header nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+nav a {
+  font-size: 1.8rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+  border-bottom: 3px solid #b74b4b;
+}
+
+/* Navbar for small screens (995px or less) */
+@media (max-width: 995px) {
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: #161616;
+    padding: 1rem;
+  }
+
+  nav a {
+    font-size: 1.6rem;
+    margin: 1rem 2rem;
+  }
+
+  nav a:hover,
+  nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #b74b4b;
+  }
+}
+/* Fixing navbar on top */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: transparent;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  /* Adjusting to avoid overlapping with content */
+  top: 0;
+}
+
+/* Content section adjustment */
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 5rem; /* Increased padding-top to accommodate navbar */
+  /* Ensure content isn't hidden by navbar */
+}
+
+/* Responsive adjustments */
+@media (max-width: 995px) {
+  body {
+    margin-top: 6rem; /* Adjust the margin to fit the navbar height */
+  }
+
+  section {
+    padding: 8rem 4rem 5rem; /* Reduced padding on smaller screens */
+  }
+}
+/* Ensure the navbar does not hide content */
+body {
+  margin-top: 8rem; /* Adjust this based on navbar height */
+}
